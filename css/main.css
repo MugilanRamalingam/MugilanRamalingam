@@ -1,0 +1,206 @@
+/* Main Styles and Variables */
+:root {
+  /* Color Variables - Vibrant Tech Theme */
+  --primary-color: #00ffb3;
+  --primary-light: #80ffe5;
+  --primary-dark: #00cc8f;
+  --accent-color: #ff2d55;
+  --secondary-color: #7000ff;
+  --text-dark: #ffffff;
+  --text-light: #b3b3b3;
+  --text-lightest: #808080;
+  --bg-white: #0a0a1f;
+  --bg-light: #141428;
+  --bg-dark: #050510;
+  --success: #00ff9d;
+  --warning: #ffcc00;
+  --error: #ff3b3b;
+  
+  /* Spacing Variables */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  
+  /* Typography */
+  --font-family: 'Space Grotesk', 'JetBrains Mono', sans-serif;
+  --line-height-body: 1.6;
+  --line-height-heading: 1.2;
+
+  /* Border Radius */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 255, 179, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 255, 179, 0.2);
+  --shadow-lg: 0 8px 16px rgba(0, 255, 179, 0.3);
+  --neon-shadow: 0 0 10px var(--primary-color),
+                 0 0 20px var(--primary-color),
+                 0 0 30px var(--primary-color);
+  
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-dark);
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  line-height: var(--line-height-body);
+  color: var(--text-dark);
+  background: 
+    radial-gradient(circle at 50% 0%, var(--bg-light), transparent 50%),
+    radial-gradient(circle at 0% 50%, var(--secondary-color), transparent 30%),
+    radial-gradient(circle at 100% 50%, var(--primary-color), transparent 30%),
+    var(--bg-dark);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-2);
+  font-weight: 700;
+  background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: var(--neon-shadow);
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  margin-bottom: var(--space-2);
+  color: var(--text-light);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+a:hover {
+  color: var(--primary-light);
+  text-shadow: 0 0 8px var(--primary-color);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-normal);
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+/* Section Styling */
+section {
+  padding: var(--space-8) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, var(--bg-light) 0%, transparent 70%);
+  opacity: 0.1;
+  animation: rotate 60s linear infinite;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  position: relative;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: var(--primary-color);
+  filter: blur(50px);
+  opacity: 0.2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to top, var(--bg-dark), transparent);
+  color: var(--text-light);
+  padding: var(--space-4) 0;
+  text-align: center;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    var(--primary-color),
+    var(--secondary-color),
+    transparent
+  );
+}
