@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Mugilan Tamalingam</h1>
+<h1 align="center">Hi 👋, I'm Mugilan Ramalingam</h1>
 <h3 align="center">🎓 AI & Data Science Student | 💻 python  | 📍 Chennai</h3>
 
 
