@@ -8,7 +8,8 @@
 ### 🌐 Portfolio
 > 🎯 Check out my personal Pages</br>
 🔗 [Portfolio](https://mugilanramalingam.github.io/MugilanRamalingam/)</br>
-> 🔗 [Linkedin](https://www.linkedin.com/in/mugilanramalingam/)
+> 🔗 [Linkedin](https://www.linkedin.com/in/mugilanramalingam/)</br>
+> mail:"mugilan1511@gmail.com"
 
 ---
 
@@ -48,7 +49,8 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/mugilanramalingam/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:mugilan1511@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  
+  
   <a href="https://mugilanramalingam.github.io/MugilanRamalingam/"><img src="https://img.shields.io/badge/Portfolio-00C853?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
 </p>
 
